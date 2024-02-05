@@ -26,8 +26,6 @@ TRACEPOINT_PROBE(tcp, tcp_probe) {
 	val.ts = bpf_ktime_get_ns();
 	__builtin_memcpy(val.saddr, args->saddr, 28);
 	__builtin_memcpy(val.daddr, args->daddr, 28);
-	//val.saddr = args->saddr;
-	//val.daddr = args->daddr;
 	val.sport = args->sport;
 	val.dport = args->dport;
 	val.family = args->family;
