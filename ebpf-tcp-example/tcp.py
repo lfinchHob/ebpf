@@ -11,7 +11,6 @@ def start_monitoring():
     try:
         while True:
             sleep(2)
-            s = ""
             for k, v in b["tcp_probe_h"].items():
                 src_ip = decode_in6(v.family, v.saddr)
                 dst_ip = decode_in6(v.family, v.daddr)
